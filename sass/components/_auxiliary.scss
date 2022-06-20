@@ -1,0 +1,106 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Body */
+
+body {
+  background-color: $primary-white-color;
+  color: $primary-text-color;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* container */
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /* outline: 1px solid tomato; */
+}
+
+/* buttons */
+
+.button {
+  color: $primary-text-color;
+  background-color: $secondary-white-color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+
+  border-radius: 4px;
+  border-color: transparent;
+
+  cursor: pointer;
+  transition: color $animation-timimg $animation-function,
+    background-color $animation-timimg $animation-function,
+    box-shadow $animation-timimg $animation-function;
+  &:hover,
+  &:focus {
+    color: $butons-text-color;
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+  &.select {
+    color: $butons-text-color;
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.button.primary {
+  color: $butons-text-color;
+  background-color: $accent-color;
+}
+
+.section,
+.feature {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.headline {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

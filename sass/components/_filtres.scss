@@ -1,0 +1,12 @@
+.filtres {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filtres__type {
+  margin-right: 8px;
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,146 @@
+.page-header {
+  border-bottom: 1px solid $header-line-color;
+}
+
+/* Nav bar */
+
+.nav-menu {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+.nav-menu__main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+.nav-menu__contact-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 0;
+}
+
+.site-nav {
+  display: flex;
+  margin-right: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__item {
+  margin-right: 50px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// .site-nav__item:last-child {
+//   margin-right: 0;
+// }
+
+.site-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $primary-text-color;
+  text-decoration: none;
+
+  transition: color $animation-timimg $animation-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    fill: $accent-color;
+  }
+}
+
+.site-nav__link--current {
+  color: $accent-color;
+  text-decoration: none;
+  position: relative;
+  transition: color $animation-timimg $animation-function;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -1px;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+  }
+}
+
+// .site-nav__link--current::after {
+//   content: '';
+//   position: absolute;
+//   display: block;
+//   bottom: -1px;
+
+//   width: 100%;
+//   height: 4px;
+//   border-radius: 2px;
+//   background-color: $accent-color;
+// }
+
+.contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts__item {
+  margin-right: 50px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// .contacts__item:last-child {
+//   margin-right: 0;
+// }
+
+.contacts__link {
+  color: $secondary-text-color;
+  fill: $secondary-text-color;
+  text-decoration: none;
+
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0px;
+  display: flex;
+  transition: color $animation-timimg $animation-function,
+    fill $animation-timimg $animation-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    fill: $accent-color;
+  }
+}
+
+.contacts__icon {
+  margin-right: 10px;
+}
+
+// .site-nav__link:hover,
+// .site-nav__link:focus,
+// .contacts__link:hover,
+// .contacts__link:focus {
+//   color: $accent-color;
+//   fill: $accent-color;
+// }

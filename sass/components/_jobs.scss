@@ -1,0 +1,44 @@
+.jobs-section {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+
+.jobs {
+  display: flex;
+}
+
+.jobs__example {
+  position: relative;
+  margin-right: 30px;
+  display: block;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.jobs__item {
+  position: relative;
+  overflow: hidden;
+}
+
+.jobs__action {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $jobs-shadow;
+}
+
+.jobs__text {
+  margin: 0;
+  color: $primary-white-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
