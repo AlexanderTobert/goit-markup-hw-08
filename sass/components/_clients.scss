@@ -1,17 +1,24 @@
 .clients {
   display: flex;
-  justify-content: space-between;
-  justify-items: center;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  // justify-content: space-between;
+  // justify-items: center;
+  // align-items: center;
 }
 
 .clients__partners {
   display: block;
-  width: 170px;
-  height: 92px;
-  &:last-child {
-    margin-right: 0;
+  width: calc((100% - 30px) / 2);
+
+  @include tablet {
+    width: calc((100% - 60px) / 3);
   }
+
+  @include desktop {
+    width: calc((100% - 150px) / 6);
+  }
+
   &:hover,
   &:focus {
     fill: $accent-color;
@@ -21,7 +28,7 @@
 
 .clients__company-logo {
   display: flex;
-  width: 170px;
+  // width: 170px;
   height: 92px;
   justify-content: center;
   justify-items: center;

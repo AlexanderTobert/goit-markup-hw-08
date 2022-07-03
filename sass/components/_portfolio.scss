@@ -1,21 +1,31 @@
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
   margin: -15px;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .portfolio__item {
   /* width: calc((100% - 60px) / 3); */
-  width: 370px;
+  // width: 370px;
   margin: 15px;
+  display: flex;
+  @include tablet {
+    width: calc(100% / 2 - 30px);
+  }
+  @include desktop {
+    width: calc(100% / 3 - 30px);
+  }
   /* overflow: hidden; */
 }
 
 .portfolio__link {
-  display: block;
   position: relative;
   /* overflow: hidden; */
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
   color: $primary-text-color;
   transition: box-shadow $animation-timimg $animation-function;
   &:hover,
@@ -132,8 +142,9 @@
   /* position: relative; */
   border: 1px solid $border-portfolio-color;
   border-top: 0;
+  flex-grow: 1;
   padding: 20px 24px;
-  z-index: 2;
+  // z-index: 2;
 }
 
 .portfolio__projects {

@@ -1,12 +1,25 @@
 .filtres {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
+  flex-wrap: wrap;
+  gap: 15px 8px;
+  margin-bottom: 40px;
 
-.filtres__type {
-  margin-right: 8px;
-  &:last-child {
-    margin-right: 0;
+  @include tablet {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    margin-bottom: 50px;
   }
 }
+
+// @include desktop {
+//   .filtres__type {
+//     margin-right: 8px;
+//     &:last-child {
+//       margin-right: 0;
+//     }
+//   }
+// }
