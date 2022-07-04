@@ -41,6 +41,13 @@
     width: 450px;
   }
 
+  @include tablet {
+    @media screen and (max-height: 608px) {
+      height: 70vh;
+    }
+    overflow: scroll;
+  }
+
   @include desktop {
     height: 581px;
     width: 528px;
