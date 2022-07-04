@@ -39,13 +39,16 @@
 
   @include mobile {
     width: 450px;
+
+    height: 70vh;
+
+    overflow: auto;
   }
 
   @include tablet {
-    @media screen and (max-height: 608px) {
-      height: 70vh;
+    @media screen and (min-height: 609px) {
+      height: 609px;
     }
-    overflow: scroll;
   }
 
   @include desktop {

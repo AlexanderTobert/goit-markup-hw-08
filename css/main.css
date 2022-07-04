@@ -1593,18 +1593,14 @@ img {
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .modal {
-    overflow: scroll;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-height: 608px) {
-  .modal {
     height: 70vh;
+    overflow: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-height: 609px) {
+  .modal {
+    height: 609px;
   }
 }
 
