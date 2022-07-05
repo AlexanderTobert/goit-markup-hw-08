@@ -25,7 +25,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-
+  padding: 10px;
   height: 609px;
   width: calc(100% - 30px);
 
@@ -60,8 +60,6 @@
 .modal__close-btn {
   display: flex;
   justify-content: flex-end;
-  margin-top: 8px;
-  margin-right: 8px;
 }
 
 .modal__item {
@@ -126,6 +124,11 @@
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: $secondary-text-color;
+
+  &:last-child {
+    margin: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .modal-form__input {
@@ -184,9 +187,9 @@
 
 .modal-form__group-policy {
   position: relative;
-  margin-top: 20px;
+
   margin-bottom: 30px;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   font-family: 'Roboto';
@@ -195,15 +198,19 @@
   font-size: 14px;
   line-height: 1.71;
   color: $secondary-text-color;
+  @include mobile {
+    display: flex;
+  }
 }
 
 .modal-form__checked-icon {
-  display: inline-block;
+  display: inline-flex;
   width: 16px;
   height: 15px;
   background-size: cover;
   margin-right: 7px;
   border: 2px solid $primary-text-color;
+  transition: border-color $animation-timimg $animation-function;
 
   border-radius: 2px;
 }
@@ -211,6 +218,10 @@
 .modal-form__checkbox {
   position: absolute;
   appearance: none;
+  &:focus ~ .modal-form__checked-icon,
+  &:hover ~ .modal-form__checked-icon {
+    border-color: $accent-color;
+  }
   &:checked ~ .modal-form__checked-icon {
     background-color: $accent-color;
     border-color: $accent-color;

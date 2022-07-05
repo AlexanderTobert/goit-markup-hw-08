@@ -3,18 +3,17 @@
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
   font-weight: 700;
-
+  font-size: 24px;
+  line-height: 1.375;
+  padding-top: 16px;
+  padding-bottom: 16px;
   display: block;
-
+  margin-right: auto;
   &--title {
     color: $accent-color;
   }
   @media screen and (min-width: 480px) {
-    font-size: 24px;
-    line-height: 1.17;
     // margin-right: 276px;
-    padding-top: 16px;
-    padding-bottom: 16px;
   }
   @include tablet {
     font-size: 24px;
@@ -34,6 +33,11 @@
 
 @include tablet {
   .logo {
-    margin-right: 0;
+    margin-right: 88px;
+  }
+}
+@include desktop {
+  .logo {
+    margin-right: 93px;
   }
 }

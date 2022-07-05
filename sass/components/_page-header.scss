@@ -40,12 +40,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-right: 0;
+  margin: 0;
 }
 
 .site-nav {
   display: flex;
-  margin-right: auto;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -151,9 +150,6 @@
 .nav-menu__contact-menu {
   display: none;
 }
-.nav-menu {
-  justify-content: space-between;
-}
 
 .mob-container {
   padding-left: 40px;
@@ -177,6 +173,16 @@
   height: 100vh;
   padding-top: 10px;
   padding-bottom: 48px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity $animation-timimg $animation-function,
+    visibility $animation-timimg $animation-function;
+}
+
+.mob-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .menu__button--close {
@@ -188,6 +194,7 @@
 
   background-color: transparent;
   transition: fill $animation-timimg $animation-function;
+  transition: opacity 1000ms $animation-function;
   &--close {
     display: none;
   }
@@ -303,6 +310,9 @@
   .nav-menu__contact-menu {
     display: block;
   }
+  .nav-menu__main-menu {
+    margin-right: auto;
+  }
   .mob-menu,
   .menu__button--open {
     display: none;
@@ -310,8 +320,17 @@
   .contacts__link {
     padding: 0;
   }
+  .contacts__link--mail {
+    padding-top: 21px;
+  }
+
+  .contacts__link--tel {
+    padding-bottom: 21px;
+  }
+
   .contacts__item {
     margin: 0;
+    padding: auto;
   }
   .contacts {
     margin: 0px, 21px;
@@ -326,13 +345,19 @@
 }
 
 @include desktop {
+  .contacts__link--mail {
+    padding-top: 0;
+  }
+
+  .contacts__link--tel {
+    padding-bottom: 0;
+  }
   .contacts__link {
     align-items: center;
     justify-content: center;
     padding: 32px 0px;
     display: flex;
   }
-
   .contacts__item {
     margin-right: 50px;
     &:last-child {

@@ -1,7 +1,10 @@
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  display: block;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 // .features__element {
@@ -14,10 +17,11 @@
 
 .features__element {
   width: 100%;
-  // margin-bottom: 30px;
-  // &:last-child {
-  //   margin-bottom: 0;
-  // }
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @include tablet {
     width: calc((100% - 30px) / 2);
   }
@@ -41,6 +45,7 @@
 .features__title {
   font-weight: 700;
   font-size: 14px;
+  font-family: 'Roboto';
   line-height: 1.14;
   text-transform: uppercase;
   text-align: center;
@@ -53,6 +58,7 @@
 
 .features__text {
   color: $secondary-text-color;
+  font-family: 'Roboto';
   font-size: 14px;
   line-height: 1.71;
 

@@ -25,6 +25,7 @@
 
   @include desktop {
     max-width: 1600px;
+    padding: 200px 0;
     background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
       url(../images/Image.jpg);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -37,6 +38,7 @@
   color: $primary-white-color;
   font-weight: 900;
   font-size: 26px;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.68;
   text-align: center;
   letter-spacing: 0.06em;
