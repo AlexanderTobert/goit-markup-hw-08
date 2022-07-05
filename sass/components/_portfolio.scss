@@ -1,6 +1,6 @@
 .portfolio {
-  margin: -30px;
-  // gap: 30px;
+  // margin: -30px;
+  gap: 30px;
   @include tablet {
     display: flex;
     flex-wrap: wrap;
@@ -12,21 +12,22 @@
   // width: 370px;
 
   margin: 30px;
-  // display: flex;
-
-  @include tablet {
-    width: calc(100% / 2 - 30px);
-  }
-  @include desktop {
-    width: calc(100% / 3 - 60px);
-  }
+  display: block;
 
   // @include tablet {
-  //   width: calc((100% - 60px) / 2);
+  //   width: calc(100% / 2 - 30px);
   // }
   // @include desktop {
-  //   width: calc((100% - 60px) / 3);
+  //   width: calc(100% / 3 - 60px);
   // }
+
+  @include tablet {
+    margin: 0px;
+    width: calc((100% - 60px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+  }
   /* overflow: hidden; */
 }
 

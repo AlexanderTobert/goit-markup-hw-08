@@ -1443,7 +1443,7 @@ img {
 }
 
 .portfolio {
-  margin: -30px;
+  gap: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1459,18 +1459,20 @@ img {
 .portfolio__item {
   /* width: calc((100% - 60px) / 3); */
   margin: 30px;
+  display: block;
   /* overflow: hidden; */
 }
 
 @media screen and (min-width: 768px) {
   .portfolio__item {
-    width: calc(100% / 2 - 30px);
+    margin: 0px;
+    width: calc((100% - 60px) / 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .portfolio__item {
-    width: calc(100% / 3 - 60px);
+    width: calc((100% - 60px) / 3);
   }
 }
 
