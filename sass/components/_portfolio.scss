@@ -11,15 +11,20 @@
   /* width: calc((100% - 60px) / 3); */
   // width: 370px;
 
-  margin: 30px;
-  display: block;
-
-  // @include tablet {
+  //margin 3opx;
+  //@include tablet {
   //   width: calc(100% / 2 - 30px);
   // }
   // @include desktop {
   //   width: calc(100% / 3 - 60px);
   // }
+
+  margin-bottom: 30px;
+  display: block;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @include tablet {
     margin: 0px;

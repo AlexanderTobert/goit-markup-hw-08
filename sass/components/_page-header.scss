@@ -256,6 +256,9 @@
   color: $accent-color;
   letter-spacing: 0.02em;
   margin-bottom: 32px;
+  @media screen and (max-width: 430px) {
+    font-size: 26px;
+  }
 }
 
 .mob-contact__mail {

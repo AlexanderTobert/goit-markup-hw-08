@@ -568,6 +568,12 @@ img {
   margin-bottom: 32px;
 }
 
+@media screen and (max-width: 430px) {
+  .mob-contact__tel {
+    font-size: 26px;
+  }
+}
+
 .mob-contact__mail {
   font-family: 'Roboto';
   font-style: normal;
@@ -1458,9 +1464,13 @@ img {
 
 .portfolio__item {
   /* width: calc((100% - 60px) / 3); */
-  margin: 30px;
+  margin-bottom: 30px;
   display: block;
   /* overflow: hidden; */
+}
+
+.portfolio__item:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
